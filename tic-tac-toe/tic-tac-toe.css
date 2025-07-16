@@ -1,0 +1,51 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.cell {
+  background-color: #222;
+  border: 2px solid #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.x-cell {
+  color: #00f2fe;
+}
+
+.o-cell {
+  color: #ff6b6b;
+}
+
+.cell:hover {
+  background-color: #333;
+}
+
+.status {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.cell.winning {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 10px #4caf50;
+}
+
+.board.draw-state .cell {
+  background-color: #666 !important;
+  color: #ccc !important;
+}
