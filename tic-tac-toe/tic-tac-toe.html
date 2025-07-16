@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="../common.css" />
+  <link rel="stylesheet" href="tic-tac-toe.css" />
+  <script src="../home.js" defer></script>
+  <script src="tic-tac-toe.js" defer></script>
+</head>
+<body>
+  <!-- 🔉 Audio Effects -->
+  <audio id="bgMusic" src="../bg-music.mp3" loop></audio>
+  <audio id="winSound" src="win-sound.mp3"></audio>
+  <audio id="drawSound" src="draw-sound.mp3"></audio>
+  <audio id="loseSound" src="lose-sound.mp3"></audio>
+
+  <!-- 🎮 Game Area -->
+  <div class="container">
+    <h1>⭕ Tic Tac Toe</h1>
+    <div id="board" class="board"></div>
+    <div id="gameStatus" class="status">Player X's turn</div>
+
+    <div class="controls">
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="togglePause()">⏸️ Pause</button>
+      <button onclick="goHome()">Back to Home</button>
+    </div>
+
+    <!-- 🧃 Footer -->
+    <footer style="text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.9rem;">
+      <h4><a href="https://pratyush-patwa.github.io/">© 2025 Pratyush Patwa</a></h4>
+      <p>Made with ❤️ for fun</p>
+    </footer>
+  </div>
+</body>
+</html>
