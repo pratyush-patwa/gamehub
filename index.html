@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="common.css" />
+  <script src="home.js" defer></script>
+</head>
+<body>
+  <div class="hub-container">
+    <h1>🎮 Welcome to Game Hub</h1>
+
+    <!-- Name Input -->
+    <div id="nameInputSection">
+      <p style="font-size: 1.2rem;">Enter your name to begin:</p>
+      <div class="input-box">
+        <input type="text" id="playerName" placeholder="Your name..." />
+        <button onclick="submitName()">Continue</button>
+      </div>
+    </div>
+
+    <!-- Game & Greeting Section -->
+    <div id="gameButtons" style="display: none;">
+      <h2 id="greeting"></h2>
+      <button onclick="openLeaderboard()" class="leaderboard-btn">View Leaderboard</button>
+
+      <!-- Leaderboard Popup -->
+      <div id="leaderboardPopup" class="leaderboard-modal" style="display: none;">
+        <div class="leaderboard-content">
+          <h3>🏆 Leaderboard</h3>
+          <div id="leaderboardData"></div>
+          <button onclick="closeLeaderboard()">Close</button>
+        </div>
+      </div>
+
+      <!-- Game Card Grid -->
+      <div class="card-container">
+        <a href="tic-tac-toe/tic-tac-toe.html" class="game-card tic">
+          <div class="card-content">
+            <h2>⭕ Tic Tac Toe</h2>
+            <p>Quick moves and strategy in a 3x3 grid</p>
+          </div>
+        </a>
+
+        <a href="snake/snake.html" class="game-card snake">
+          <div class="card-content">
+            <h2>🐍 Snake Game</h2>
+            <p>Slither, eat, and dodge obstacles</p>
+          </div>
+        </a>
+
+        <a href="tetris/tetris.html" class="game-card tetris">
+          <div class="card-content">
+            <h2>🧱 Tetris</h2>
+            <p>Stack and rotate blocks to clear lines</p>
+          </div>
+        </a>
+
+        <a href="dino-runner/dino-runner.html" class="game-card dino">
+          <div class="card-content">
+            <h2>🦖 Dino Runner</h2>
+            <p>Jump cactus and race through the desert</p>
+          </div>
+        </a>
+
+        <a href="sudoku/sudoku.html" class="game-card sudoku">
+          <div class="card-content">
+            <h2>🔢 Sudoku</h2>
+            <p>Fill the grid using logic and numbers</p>
+          </div>
+        </a>
+
+        <a href="2048/2048.html" class="game-card numbers">
+          <div class="card-content">
+            <h2>🧮 2048</h2>
+            <p>Merge tiles and reach the magic number</p>
+          </div>
+        </a>
+
+        <a href="brick-breakers/brick-breakers.html" class="game-card bricks">
+          <div class="card-content">
+            <h2>🧱 Brick Breakers</h2>
+            <p>Bounce the ball and smash all bricks</p>
+          </div>
+        </a>
+
+        <a href="space-invaders/space-invaders.html" class="game-card space">
+          <div class="card-content">
+            <h2>👾 Space Invaders</h2>
+            <p>Shoot aliens before they reach Earth</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.9rem;">
+      <h4><a href="https://pratyush-patwa.github.io/">© 2025 Pratyush Patwa</a></h4>
+      <p>Made with ❤️ for fun</p>
+    </footer>
+  </div>
+</body>
+</html>

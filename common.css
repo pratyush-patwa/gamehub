@@ -1,0 +1,252 @@
+/* 🎮 Base Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container, .hub-container {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+/* 🖼️ Canvas Display */
+canvas {
+  background-color: #000;
+  border: 2px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✍️ Headings & Score */
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#score, #dinoScore, #finalScore {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* 🧠 Name Input Styling */
+.input-box {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#playerName {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  width: 250px;
+  box-shadow: 0 0 10px #00f2feaa;
+  background-color: #ffffff;
+  color: #333;
+}
+
+#playerName:focus {
+  outline: none;
+  box-shadow: 0 0 12px #4facfeaa;
+}
+
+/* 🕹️ Buttons */
+button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* 🔗 Game Card Grid */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.game-card {
+  width: 220px;
+  height: 140px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.card-content h2 {
+  margin: 0 0 0.5rem;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* 🧬 Game Theme Colors */
+.tic     { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+.snake   { background: linear-gradient(135deg, #00ff88, #004422); }
+.tetris  { background: linear-gradient(135deg, #4D96FF, #B388EB); }
+.dino    { background: linear-gradient(135deg, #ffe259, #ffa751); }
+.sudoku  { background: linear-gradient(135deg, #98efb1, #4e9f3d); }
+.numbers { background: linear-gradient(135deg, #f6d365, #fda085); }
+.bricks  { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+.space   { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+
+/* 💫 Greeting Animation */
+#greeting {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 🏆 Leaderboard Modal */
+.leaderboard-btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #00f2fe;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.leaderboard-btn:hover {
+  background-color: #00c2cc;
+}
+
+.leaderboard-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.leaderboard-content {
+  background: #2c2c2c;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 300px;
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 🧃 Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* 🕶️ Overlay Styling */
+.game-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 100;
+  display: none;
+  pointer-events: none;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* 🪙 Bonus Score Animation */
+.bonus-text {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffd700;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+  animation: floatScore 1s ease-out forwards;
+}
+
+@keyframes floatScore {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50px);
+    opacity: 0;
+  }
+}
+
+/* 📱 Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-card {
+    width: 80%;
+    height: auto;
+    padding: 1.5rem;
+  }
+}
